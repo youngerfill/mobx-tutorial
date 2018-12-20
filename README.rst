@@ -1,5 +1,12 @@
+mobx-tutorial
+=============
+
+The code from the mobx 10-minute tutorial.
+
+https://mobx.js.org/getting-started.html
+
 Using mobx with react
-=====================
+---------------------
 
 Make sure npm and create-react-app are installed
 ::
