@@ -1,14 +1,14 @@
 //import ReactDOM from 'react-dom';
 //import * as h from 'react-hyperscript-helpers';
 
-import { observable, computed, mobx } from "mobx"
+import { observable, computed, autorun } from "mobx"
 
 class ObservableTodoStore {
     @observable todos = [];
     @observable pendingRequests = 0;
 
     constructor() {
-        mobx.autorun(() => console.log(this.report));
+        autorun(() => console.log(this.report));
     }
 
     @computed get completedTodosCount() {
@@ -33,18 +33,10 @@ class ObservableTodoStore {
     }
 }
 
-
 const observableTodoStore = new ObservableTodoStore();
 
-
-//const todoStore = new TodoStore();
-
 observableTodoStore.addTodo("read MobX tutorial");
-
 observableTodoStore.addTodo("try MobX");
-
 observableTodoStore.todos[0].completed = true;
-
 observableTodoStore.todos[1].task = "try MobX in own project";
-
 observableTodoStore.todos[0].task = "grok MobX tutorial";
