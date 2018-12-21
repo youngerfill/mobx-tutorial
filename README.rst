@@ -25,6 +25,11 @@ Create a sample react app
 
     npm run eject
 
+Install mobx & mobx-react
+::
+
+   npm install mobx mobx-react
+
 Install support for decorators
 ::
 
